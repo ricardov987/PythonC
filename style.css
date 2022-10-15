@@ -9,26 +9,33 @@ html {
     font-size: 1rem;
     height: 100%;
 }
-body, header, main, footer{
+main, footer{
     min-height: 50px;
-    margin: 0.5rem;
+    margin: 1rem;
     min-width: 400px;
 }
 body{
     background-color: gray;
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    margin-top: 80px;
 }
 main{
+    display: flex;
+    flex-wrap: nowrap;
     min-height: 200px;
     overflow: auto;
-    background: #2c3e50;
+    background: black;
+    justify-content: space-between;
 }
 header {
-    position: fixed;  
+    top: 0;
+    position: static;
 }
 footer {
-    background: white;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
+    height: 90px;
+    line-height: 54px;
+    text-align: center;
+    background: #2fcdcd;
 }
 .header-logo {
 position: absolute;
@@ -43,9 +50,9 @@ nav{
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
     background: #2fcdcd;
     height: 80px;
-    width: 97.5%;
+    width: 100%;
     top: 0;
-    position: fixed;
+    
 }
 .enlace{
     position: absolute;
@@ -134,18 +141,32 @@ section{
 }
 
 .artic-ppal {
-    margin-top: 5rem;
-    margin-right: 4rem;
+    padding: 10rem 2rem;
     text-align: justify;
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #eee;
 }
-.col {
-    
-    width: 50%;
-    float: left;
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
+.col {
+    flex-basis: 50%;
+}
+
+@media (max-width: 858px) {
+    main {
+        flex-wrap: wrap;
+    }
+    .col{
+        flex-basis: 100%;
+        height: auto;  
+    }
+    .artic-ppal {
+        padding: 2rem;
+    }
+  }
 
 /*imagenes de trabajos*/
 .slider-container {
@@ -162,14 +183,6 @@ section{
     object-fit: cover;
     scroll-snap-align: center;
   }
-  
-
-.blog-footer {
-    height: 90px;
-    line-height: 54px;
-    text-align: center;
-    background: #eee;
-}
 footer .inner {
     max-width: initial;
 }
@@ -179,6 +192,10 @@ footer .inner {
     padding: 0 25px;
 }
 #foot-back {
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    text-transform: uppercase;
     padding-top: 100rem;
     width: 100%;
     position: relative;

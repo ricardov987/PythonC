@@ -244,11 +244,13 @@ footer .inner {
 .container-form h2{
     margin-bottom: 20px;
     font-size: 41px
+    color: white;
 }
 .container-form p{
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
+    color: white;
 }
 .container-form a{
     font-size: 17px;

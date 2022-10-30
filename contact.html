@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nina Nails</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icono.ico" />
 </head>
+
 <body>
-    <header>        
+    <header>
         <nav>
             <div class="header-logo">
                 <img id="logo" src="img/logo2.jpg" alt="">
@@ -24,23 +28,68 @@
             <ul>
                 <li> <a href="Index.html">Inicio</a></li>
                 <li> <a href="work.html">Trabajos</a></li>
-                <li> <a href="turno.html">Turnos</a></li>
-                <li> <a class="active" href="contact.html">Contactos</a></li>
+                <li> <a href="turnos.html">Turnos</a></li>
+                <li> <a class="active" href="#">Contacto</a></li>
             </ul>
-        </nav>      
+        </nav>
     </header>
     <main>
-        
+        <div class="container-form">
+            <div class="info-form">
+                <h2>Contacto</h2>
+                <p>Dejame tu mensaje.</p>
+                <a href="https://instagram.com/ninanails.i?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i>Ninanails.i</a>
+                <a href="#"><i class="fa fa-envelope"></i>Ninanails.19@gmail.com</a>
+                <a href="https://goo.gl/maps/Q6rUWsWfxubnADp57"><i class="fa fa-map-marked"></i>Córdoba Capital,
+                    Argentina.</a>
+            </div>
+            <form name="formulario" action="#" autocomplete="off">
+                <input type="text" name="nombre" placeholder="Ingresa tu Nombre" id="nombre">
+                <input type="emal" name="email" placeholder="Ingresa tu Email" id="email">
+                <textarea name="mensaje" placeholder="Aqui tu Mensaje..."></textarea>
+                <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar" onclick="validarEnviar()">
+            </form>
+        </div>
+        <script>
+            function validarEnviar() {
+                const nombreDeUsuario = document.getElementById('nombre');
+                const direcciónEmail = document.getElementById('email');
+                const emailVálido = email => {
+                    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                }
+                if (nombre.value === "") {
+                    alert("Por favor, escribe tu nombre.");
+                    nombre.focus();
+                    return false;
+                }
+                if (email.value === "") {
+                    alert("Por favor, escribe tu correo electrónico.");
+                    email.focus();
+                    return false;
+                }
+
+                if (!emailVálido(email.value)) {
+                    alert("Por favor, escribe un correo electrónico válido");
+                    emailAddress.focus();
+                    return false;
+                }
+
+                alert("Muchas gracias por tu mensaje.");
+                document.fvalida.submit();
+            }
+
+        </script>
     </main>
-    <footer class="blog-footer">
+    <footer>
         <div class="inner">
             <div id="footer-left">
-                <p>Todos los derechos reservados</p>
+                <p></p>
             </div>
             <div id="footer-right">
-                <p id="foot-back"> Powered by Grupo 23</p>
+                <p id="foot-back"> Powered by Grupo 29</p>
             </div>
         </div>
     </footer>
-</body>
+
 </html>

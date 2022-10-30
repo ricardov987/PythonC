@@ -24,12 +24,13 @@
             <ul>
                 <li> <a href="Index.html">Inicio</a></li>
                 <li> <a class="active" href="work.html">Trabajos</a></li>
-                <li> <a href="turno.html">Turnos</a></li>
+                <li> <a href="turnos.html">Turnos</a></li>
                 <li> <a href="contact.html">Contactos</a></li>
             </ul>
         </nav>      
     </header>
     <main>
+    
         <div class="slider-container">  
             <img
               class="slider-item"
@@ -55,15 +56,50 @@
               <img
               class="slider-item"
               src="img/308004282_123509590471405_3825472409820895298_n.jpg"/>
-          </div>  
+              <img
+              class="slider-item"
+              src="img/308376344_1054014101975188_5563561059111370377_n.jpg"/>
+              <img
+              class="slider-item"
+              src="img/308458275_2281414155368285_2196004374087836535_n.jpg"/>
+              <img
+              class="slider-item"
+              src="img/308918207_164894219461818_2212403903727886768_n.jpg"/>
+              <img
+              class="slider-item"
+              src="img/309208978_651359102976793_2098592797033210349_n.jpg"/>
+              <img
+              class="slider-item"
+              src="img/309208978_651359102976793_2098592797033210349_n.jpg"/>
+              
+              
+          </div> 
+          <script>
+            var slideIndex = 0;
+            showSlides();
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("slider-item");
+              for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if(slideIndex > slides.length) {
+                slideIndex = 1
+              }
+              slides[slideIndex - 1].style.display = "block";
+              setTimeout(showSlides, 3000); 
+            }
+          </script>
+        
     </main>
     <footer class="blog-footer">
         <div class="inner">
             <div id="footer-left">
-                <p>Todos los derechos reservados</p>
+                <p></p>
             </div>
             <div id="footer-right">
-                <p id="foot-back"> Powered by Grupo 23</p>
+                <p id="foot-back"> Powered by Grupo 29</p>
             </div>
         </div>
     </footer>

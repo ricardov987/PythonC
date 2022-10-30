@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icono.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="header-logo">
+                <img id="logo" src="img/logo2.jpg" alt="">
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="#" class="enlace">
+                <img src="logo.png" alt="" class="logo">
+            </a>
+            <ul>
+                <li> <a href="Index.html">Inicio</a></li>
+                <li> <a href="work.html">Trabajos</a></li>
+                <li> <a class="active" href="#">Turnos</a></li>
+                <li> <a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h3> Turnos</h3>
+    
+
+        <form action="" class="formturnos">
+            <fieldset class="datos">
+        <legend>Datos Personales</legend>
+   
+         <level for="nom">Nombre:
+            <input type="text" name="nombre"  placeholder="Escribí tu nombre" id="nom" required autofocus>
+         </level> <br><p>
+    
+            <level for="edad">Edad:
+                <input name="edad" id="edad"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type="number" maxlength="2" />
+            </level> <br>
+            <p>
+    <level for="cumple">Cumpleaños: 
+        <input type="date" name="cumple" id="cumple" value="01-01-1999"
+        placeholder="cuando naciste?">
+    </level> <br><p>
+    
+    <level for="mail">Mail de contacto:
+        <input id="mail" type="email" name="email"
+        placeholder="Escribí tu mail" required>
+    </level> <br><p>
+
+        <level for="tel">Teléfono:
+            <input name="tel" id="tel" placeholder="ejemplo: 011 1111 1111"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                type="number" maxlength="11">
+        </level><br>
+        
+    <p></p>
+    
+    <level for="igram">Tu Instagram:
+        <input type="url" id="igram"
+        placeholder="Escribí tu instagram">
+    </level><br><p>
+</fieldset>
+
+<fieldset> 
+    <legend>Sobre tu cita</legend> 
+
+<level for="dia">Selecciona el/los día/s en que deseas tu turno:
+    <ol>
+        <input type="checkbox" name="opcion" value="1">Lunes 
+        <input type="checkbox" name="opcion" value="1">Martes
+        <input type="checkbox" name="opcion" value="1">Miércoles
+        <input type="checkbox" name="opcion" value="1">Jueves
+        <input type="checkbox" name="opcion" value="1">Viernes
+        <input type="checkbox" name="opcion" value="1">Sábados
+    </ol>
+
+    
+</level>
+
+<level for="hora"> Selecciona dentro de que rango horario preferís?:
+ 
+        <input type="radio" name="hora" value="1">09:00 a 13:00
+        <input type="radio" name="hora" value="1">13:30 a 16:00
+        <input type="radio" name="hora" value="1">17:00 a 20:00
+
+  
+
+</level>
+
+
+</fieldset>
+
+
+
+<button type="submit" onclick="alert('Tus datos fueron enviados. En breve nos comunicamos con vos')";
+>Enviar</button>
+<input type="reset" value="Borrar">
+<!--<input type="color" name="color">-- este lo saque>
+
+
+    </form>
+
+</body>
+</html>

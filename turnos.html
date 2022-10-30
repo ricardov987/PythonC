@@ -34,7 +34,6 @@
     </header>
     <main>
         <div class="turnos">
-            <h3> Turnos</h3>
             <form action="" class="formturnos">
                 <fieldset class="datos">
                     <legend>Datos Personales</legend>
@@ -44,7 +43,7 @@
                     </level> <br>
                     <p>
                         <level for="edad">Edad:
-                            <input name="edad" id="edad"
+                            <input name="edad" id="edad" placeholder="Escribí tu edad"
                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                 type="number" maxlength="2" />
                         </level> <br>
@@ -59,7 +58,7 @@
                         </level> <br>
                     <p>
                         <level for="tel">Teléfono:
-                            <input name="tel" id="tel" placeholder="ejemplo: 011 1111 1111"
+                            <input name="tel" id="tel" placeholder="Ejemplo: 011 1111 1111"
                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                 type="number" maxlength="11">
                         </level><br>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 * {
     cursor: url(img/una.gif), auto;
     padding: 0;
@@ -9,21 +8,17 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
-
 html {
     font-size: 1rem;
     height: 100%;
 }
-
-body {
+body{
     background-color: gray;
 }
-
-main {
+main{
     font-weight: 500;
     min-height: 50px;
-    margin: 1rem;
-    /*v= VERRRR */
+    margin: 1rem; /*v= VERRRR */
     min-width: 400px;
     margin-top: 6rem;
     display: flex;
@@ -33,17 +28,15 @@ main {
     background: black;
     justify-content: space-between;
 }
-
 header {
     top: 0;
     width: 100%;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
     background: #2fcdcd;
-    height: 80px;
+    height: 80px; 
     position: fixed;
     font-weight: 900;
 }
-
 footer {
     width: 100%;
     box-shadow: 0 -7px 10px rgba(0, 0, 0, 0.25);
@@ -52,57 +45,46 @@ footer {
     text-align: center;
     background: #2fcdcd;
 }
-
 .header-logo {
-    position: absolute;
-    height: auto;
-    width: auto;
+position: absolute;
+height: auto;
+width: auto;
 }
-
 #logo {
     max-height: 80px;
 }
-
 /*menu*/
-nav {
+nav{
     font-weight: 900;
 }
-
-.enlace {
+.enlace{
     position: absolute;
     padding: 20px 50px;
 }
-
-.logo {
+.logo{
     height: 40px;
 }
-
-nav ul {
+nav ul{
     float: right;
     margin-right: 20px;
 }
-
-nav ul li {
+nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
-
-nav ul li a {
+nav ul li a{
     color: #fff;
     font-size: 18px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-
-li a.active,
-li a:hover {
+li a.active, li a:hover{
     background: #000090;
     transition: .5s;
 }
-
-.checkbtn {
+.checkbtn{
     font-size: 30px;
     color: #fff;
     float: right;
@@ -111,34 +93,29 @@ li a:hover {
     cursor: pointer;
     display: none;
 }
-
-#check {
+#check{
     display: none;
 }
-
-section {
+section{
     background: url(fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: calc(100vh - 80px);
 }
 
-@media (max-width: 952px) {
-    .enlace {
+@media (max-width: 952px){
+    .enlace{
         padding-left: 20px;
     }
-
-    nav ul li a {
+    nav ul li a{
         font-size: 16px;
     }
 }
-
-@media (max-width: 858px) {
-    .checkbtn {
+@media (max-width: 858px){
+    .checkbtn{
         display: block;
     }
-
-    ul {
+    ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -148,28 +125,22 @@ section {
         text-align: center;
         transition: all .5s;
     }
-
-    nav ul li {
+    nav ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-
-    nav ul li a {
+    nav ul li a{
         font-size: 20px;
     }
-
-    li a:hover,
-    li a.active {
+    li a:hover, li a.active{
         background: none;
         color: red;
     }
-
-    #check:checked~ul {
-        left: 0;
+    #check:checked ~ ul{
+        left:0;
     }
 }
-
 /* ****************************** */
 .artic-ppal {
     padding: 10rem 2rem;
@@ -178,12 +149,10 @@ section {
     font-family: Arial, Helvetica, sans-serif;
     color: #eee;
 }
-
 main h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
-
 .col {
     flex-basis: 50%;
 }
@@ -192,16 +161,14 @@ main h1 {
     main {
         flex-wrap: wrap;
     }
-
-    .col {
+    .col{
         flex-basis: 100%;
-        height: auto;
+        height: auto;  
     }
-
     .artic-ppal {
         padding: 2rem;
     }
-}
+  }
 
 /*imagenes de trabajos*/
 .slider-container {
@@ -210,25 +177,22 @@ main h1 {
     height: 100vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-}
-
-.slider-container img {
+  }
+  
+  .slider-container img {
     flex: 0 0 100%;
     width: 100%;
     object-fit: cover;
     scroll-snap-align: center;
-}
-
+  }
 footer .inner {
     max-width: initial;
 }
-
 .inner {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 25px;
 }
-
 /*footer*/
 #foot-back {
     color: #fff;
@@ -247,15 +211,143 @@ footer .inner {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
 #footer-left {
-    float: left;
-    width: 50%;
+    float:left;
+    width:50%;
     margin-top: 18px
 }
-
 #footer-right {
-    float: right;
-    width: 50%;
+    float:right;
+    width:50%;
     margin-top: 10px
+}
+/*contacto*/
+.container-form{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    grid-auto-flow: dense;
+}
+.container-form h2{
+    margin-bottom: 20px;
+    font-size: 41px
+}
+.container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white;
+}
+.container-form a i{
+    color: lightseagreen;
+    margin-right: 7px;
+}
+.container-form form #nombre, #email, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #03e3c5;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+.container-form form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+.btn-enviar{
+    margin-bottom: 1rem;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: lightseagreen;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.btn-enviar:hover{
+    background: #03e3c5;
+}
+/* ********************************* */
+/*Turnos*/
+.turnos{
+    padding-top: 4rem;
+    width: 100%;
+    font-weight: 600;
+    display: grid;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+    ,url(img/Imagen-turnos.jpeg);
+    background-size: 100vw 100vh; /*le doy 100% del ancho y alto de la ventana*/
+    background-attachment: fixed; /*para q la imagen quede fija cuando cambiamos el tamaño */
+    color: #fff;
+}
+main h2{
+    text-align: center;
+}
+.iframe-rwd  {
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: 1rem 10rem;
+    position: relative;
+    padding-bottom: 30%;
+    height: 0;
+    overflow: hidden;
+    }
+    .iframe-rwd iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.formturnos 
+{
+    width:800px ; 
+    margin: auto;
+    background: rgba(245, 142, 142, 0.6) ;   
+    padding: 5px 10px; /* el margen del formulario*/
+    box-sizing: border-box; /*para q los bordes del formulario se mantengan con los 450px*/
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.datos input 
+{
+    width:100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 7px; /*padding del formulario*/
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.res input
+{
+    margin: 1rem;
+}
+@media (max-width:715px) /* que el formulario se realice con los 715 que es el width + el padding*/
+{
+    form
+     {width: 100%; 
+
+}
+    
 }

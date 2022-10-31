@@ -58,6 +58,9 @@
                 const emailVálido = email => {
                     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
                 }
+                const nombreVálido = nombre => {
+                    return /^([a-zA-ZñÑáéíóúÁÉÍÓÚ])+$/i.test(nombre);
+                }
                 if (nombre.value === "") {
                     alert("Por favor, escribe tu nombre.");
                     nombre.focus();
@@ -72,6 +75,11 @@
                 if (!emailVálido(email.value)) {
                     alert("Por favor, escribe un correo electrónico válido");
                     emailAddress.focus();
+                    return false;
+                }
+                if (!nombreVálido(nombre.value)) {
+                     alert("Por favor, escribe un nombre válido");
+                    nombre.focus();
                     return false;
                 }
 

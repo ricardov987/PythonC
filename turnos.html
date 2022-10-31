@@ -49,8 +49,7 @@
                         </level> <br>
                     <p>
                         <level for="cumple">Cumpleaños:
-                            <input type="date" name="cumple" id="cumple" value="01-01-1999"
-                                placeholder="cuando naciste?">
+                            <input type="date" name="cumple" id="cumple">
                         </level> <br>
                     <p>
                         <level for="mail">Mail de contacto:
@@ -96,11 +95,20 @@
             </form>
             <br>
             <h2>DONDE ESTAMOS</h2>
-            <div class="iframe-rwd">
-                <iframe width="125" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.03828706787!2d-64.194344!3d-31.3994532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1667084889810!5m2!1ses-419!2sar"></iframe><br /><small><a
-                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.03828706787!2d-64.194344!3d-31.3994532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1667084889810!5m2!1ses-419!2sar"
-                        style="color:#0000FF;text-align:left">View Larger Map</a></small>
+            <div id="map">
+                <script>
+                    function iniciarMap() {
+                        var coord = { lat: -31.399303, lng: -64.1942863 };
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 10,
+                            center: coord
+                        });
+                        var marker = new google.maps.Marker({
+                            position: coord,
+                            map: map
+                        });
+                    }
+                </script>
             </div>
         </div>
     </main>
@@ -114,6 +122,8 @@
             </div>
         </div>
     </footer>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuGRDdatIpNAvzHxwIHNjDhc7Hsm_NATo&callback=iniciarMap"></script>
 </body>
 
 </html>
